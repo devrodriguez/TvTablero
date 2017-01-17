@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <style>
+            html, body{
+                overflow: hidden;
+            }
+            .page-title {
+                background-color:red;
+                color: #fff;
+                opacity: 0.75;
+                font-size: 35px;
+                font-weight:bold;
+                border-bottom:solid 1px rgba(50, 50, 50, 0.72);
+                text-align: center;
+                -webkit-box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.72);
+                -moz-box-shadow:    0px 3px 3px 0px rgba(50, 50, 50, 0.72);
+                box-shadow:         0px 3px 3px 0px rgba(50, 50, 50, 0.72);
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+        <script src="/tvcultivo/js/data/DataAjax.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-title">
+                        <span>Clasificacion Rosa - Peores 8 Rendimientos | </span>
+                        <span id="spLastUp"></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="chart_div"></div>
+                </div>
+            </div>
+        </div>
+        <script src="/tvcultivo/js/page/bad8rend.js"></script>
+        <script>
+            (function(){
+                new Bad8Rend().init();
+            })();
+        </script>
+    </body>
+</html>
