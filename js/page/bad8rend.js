@@ -1,7 +1,10 @@
 var Bad8Rend = function(){
     var that = this;
+    var tool = new Tools();    
+
     that.prop = {
-        orgChart: {}
+        orgChart: {},
+        origen: tool.fn.UrlParam('origen')
     };
     
     that.data = {
@@ -85,7 +88,7 @@ var Bad8Rend = function(){
         },
         getRendimientos: function(){
             var dataAjax = new DataAjax({
-                url: 'http://localhost:5000/8pren',
+                url: 'http://localhost:5000/8pren/' + that.prop.origen,
                 dataType: 'jsonp',
                 crossDomain: true
             });
