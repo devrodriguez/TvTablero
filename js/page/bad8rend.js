@@ -4,7 +4,7 @@ var Bad8Rend = function(){
 
     that.prop = {
         orgChart: {},
-        origen: tool.fn.UrlParam('origen')
+        origen: sessionStorage.getItem('origen')
     };
     
     that.data = {
