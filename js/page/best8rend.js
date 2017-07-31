@@ -1,8 +1,10 @@
 var Best8Rend = function(){
     var that = this;
+    var tool = new Tools();
+    
     that.prop = {
         columnChart: {},
-        origen: sessionStorage.getItem('origen')
+        origen: sessionStorage.getItem('origen') == "null" ? tool.fn.UrlParam('origen') : sessionStorage.getItem('origen')
     };
     
     that.data = {
@@ -80,7 +82,7 @@ var Best8Rend = function(){
         },
         getRendimientos: function(){
             var dataAjax = new DataAjax({
-                url: 'http://localhost:5000/8ren/' + that.prop.origen,
+                url: 'http://localhost/node/rendimientos/8ren/' + that.prop.origen,
                 dataType: 'jsonp',
                 crossDomain: true
             });

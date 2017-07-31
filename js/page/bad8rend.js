@@ -4,7 +4,7 @@ var Bad8Rend = function(){
 
     that.prop = {
         orgChart: {},
-        origen: sessionStorage.getItem('origen')
+        origen: sessionStorage.getItem('origen') == "null" ? tool.fn.UrlParam('origen') : sessionStorage.getItem('origen')
     };
     
     that.data = {
@@ -88,7 +88,7 @@ var Bad8Rend = function(){
         },
         getRendimientos: function(){
             var dataAjax = new DataAjax({
-                url: 'http://localhost:5000/8pren/' + that.prop.origen,
+                url: 'http://localhost/node/rendimientos/8pren/' + that.prop.origen,
                 dataType: 'jsonp',
                 crossDomain: true
             });
